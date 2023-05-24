@@ -1,0 +1,58 @@
+---
+import legalImage from "@assets/legal-advice-1.jpg";
+import { Picture } from "@astrojs/image/components";
+---
+
+<section>
+  <div class="mx-auto max-w-screen-2xl px-4 py-16 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 lg:h-screen lg:grid-cols-3">
+      <div class="relative z-10 lg:py-16">
+        <div class="relative h-64 sm:h-80 lg:h-full">
+          <Picture
+            alt="Client recieving legal advice"
+            src={legalImage}
+            widths={[200, 400, 600, 800]}
+            aspectRatio="16:9"
+            sizes="(max-width: 800px) 100vw, 620px"
+            loading="eager"
+            format="avif"
+            class="absolute inset-0 h-full w-full object-cover object-right"
+          />
+        </div>
+      </div>
+
+      <div class="relative flex items-center bg-gray-100 lg:col-span-2">
+        <span
+          class="hidden lg:absolute lg:inset-y-0 lg:-start-16 lg:block lg:w-16 lg:bg-gray-100"
+        ></span>
+
+        <div class="p-8 sm:p-16 lg:p-24">
+          <h2 class="text-2xl font-bold sm:text-3xl">La firma</h2>
+
+          <p class="mt-4 text-gray-600">
+            Representamos y defendemos los intereses de nuestros clientes que
+            operan en los diferentes sectores industriales, comerciales,
+            tecnológicos y de servicios, y brindamos el asesoramiento jurídico,
+            económico, y financiero a personas individuales.
+          </p>
+          <p class="mt-4 text-gray-600">
+            Nuestros profesionales aseguran un absoluto conocimiento de nuestras
+            distintas áreas de especialización, lo que nos permite ofrecer una
+            atención y un trato personalizado y directo con cada uno de nuestros
+            clientes, con una absoluta confidencialidad y discreción en la
+            gestión de sus intereses.
+          </p>
+          <p class="mt-4 text-gray-600">
+            <span class="font-bold">Seven Law Firm</span> ofrece un servicio global y especifico que abarca el
+            análisis, planificación, ejecución, y gestión de cada encargo
+            recibido. Nuestra mentalidad empresarial, nuestro compromiso, y
+            experiencia en ofrecer una respuesta rápida, eficaz y adaptada a las
+            necesidades particulares de cada caso, nos obliga a estar en
+            continua evolución y adaptación de los servicios ofrecidos,
+            procurando siempre la excelencia.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,125 @@
+---
+// @ts-ignore
+import { Icon } from "astro-icon";
+
+const areas = [
+  {
+    title: "Arbitraje",
+    description: "",
+    icon: "arbitraje",
+  },
+  {
+    title: "Tributario, Fiscal y Financiero",
+    description: "",
+    icon: "tributario",
+  },
+  {
+    title: "Bancario e Inversiones",
+    description: "",
+    icon: "bancario",
+  },
+  {
+    title: "Reestructuraciones e Insolvencias",
+    description: "",
+    icon: "reestructura",
+  },
+  {
+    title: "Concursal",
+    description: "",
+    icon: "concursal",
+  },
+  {
+    title: "Competencia y Derecho de la UE",
+    description: "",
+    icon: "euro",
+  },
+  {
+    title: "Contencioso",
+    description: "",
+    icon: "contencioso",
+  },
+  {
+    title: "Corporate Compliance",
+    description: "",
+    icon: "corporate_compliance",
+  },
+  {
+    title: "Infraestructuras y PPP",
+    description: "",
+    icon: "infraestructura",
+  },
+  {
+    title: "Laboral",
+    description: "",
+    icon: "laboral",
+  },
+  {
+    title: "Medio Ambiente",
+    description: "",
+    icon: "medio_ambiente",
+  },
+  {
+    title: "Mercado de valores",
+    description: "",
+    icon: "mercado_valores",
+  },
+  {
+    title: "Mercantil y Societario",
+    description: "",
+    icon: "societario",
+  },
+  {
+    title: "Penal",
+    description: "",
+    icon: "penal",
+  },
+  {
+    title: "Propiedad intelectual e industrial, Medios y Protección de datos",
+    description: "",
+    icon: "intelectual",
+  },
+  {
+    title: "Público, administrativo, urbanismo, e inmobiliario",
+    description: "",
+    icon: "publico",
+  },
+  {
+    title: "Urbanismo",
+    description: "",
+    icon: "urbanismo",
+  },
+  {
+    title: "Familia, Matrimonial, Canónico y Eclesiástico",
+    description: "",
+    icon: "familia",
+  },
+];
+---
+
+<div class="mt-24">
+  <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight">
+    Nuestras áreas
+  </h2>  <p class="text-lg mt-4 text-slate-600">
+    Prestamos asesoramiento con un compromiso total con el cliente y con el
+    objetivo de la excelencia en la prestación del servicio. Nuestras áreas de
+    especialización cubren todas las disciplinas
+    jurídicas-económicas-financieras del entorno económico actual:
+  </p>
+
+
+<div class="grid sm:grid-cols-2 md:grid-cols-3 mt-12 gap-12">
+  {
+    areas.map((area) => (
+      <div class="flex gap-4 items-center">
+        <div class="mt-1 bg-gray-100 rounded-full p-2 w-12 h-12 shrink-0">
+          <Icon name={area.icon}/>
+        </div>
+        <div>
+          <h3 class="font-semibold text-lg">{area.title}</h3>{" "}
+          <p class="text-slate-500 mt-2 leading-relaxed">{area.description}</p>
+        </div>
+      </div>
+    ))
+  }
+</div>
+</div>

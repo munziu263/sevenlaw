@@ -1,0 +1,64 @@
+---
+import legalImage from "@assets/legal-advice-2.jpg";
+import { Picture } from "@astrojs/image/components";
+---
+
+<section>
+  <div class="mx-auto max-w-screen-2xl px-4 py-16 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 lg:h-screen lg:grid-cols-3">
+      <div class="relative z-10 lg:py-16">
+        <div class="relative h-64 sm:h-80 lg:h-full">
+          <Picture
+            alt="Client recieving legal advice"
+            src={legalImage}
+            widths={[200, 400, 600, 800]}
+            aspectRatio="16:9"
+            sizes="(max-width: 800px) 100vw, 620px"
+            loading="eager"
+            format="avif"
+            class="absolute inset-0 h-full w-full object-cover"
+          />
+        </div>
+      </div>
+
+      <div class="relative flex items-center bg-gray-100 lg:col-span-2">
+        <span
+          class="hidden lg:absolute lg:inset-y-0 lg:-start-16 lg:block lg:w-16 lg:bg-gray-100"
+        ></span>
+
+        <div class="p-8 sm:p-16 lg:p-24">
+          <h2 class="text-2xl font-bold sm:text-3xl">Nuestra vocación</h2>
+
+          <p class="mt-4 text-gray-600">
+            Nuestra vocación de servicio se dirige a llenar un cierto déficit
+            que tienen los despachos sobredimensionados. Nos centrarnos en
+            valorar y profundizar las actuales necesidades de las empresas; en
+            este sentido añadimos a nuestro asesoramiento legal el conocimiento
+            de los problemas, de la realidad del entorno en que se originan y de
+            las circunstancias que configuran el marco legal de actuación de la
+            empresa.
+          </p>
+          <p class="mt-4 text-gray-600">
+            Entendemos el ejercicio de la abogacía no sólo como una práctica
+            profesional para la solución de conflictos, sino también como la
+            prestación de servicios que permiten al cliente anticiparse a los
+            acontecimientos y desarrollar sus actividades con garantías de
+            seguridad jurídica, eficacia y rentabilidad. Con esta finalidad
+            ofrecemos servicios de seguimiento de la actividad legislativa y
+            pre-legislativa que pueda afectar a los sectores económicos de
+            interés para el cliente.
+          </p>
+          <p class="mt-4 text-gray-600">
+            SEVEN LAW FIRM entiende el ejercicio de la profesión bajo los
+            valores fundamentales de rectitud, lealtad, fidelidad, comprensión,
+            entendimiento, y excelencia en el servicio, proximidad con el
+            cliente, el respeto a los profesionales que intervienen en el
+            asesoramiento de intereses de nuestros clientes e incluso los
+            contradictorios, con el máximo respeto a las normas éticas y valores
+            cristianos y morales más exigentes.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,17 +1,19 @@
 ---
 import { Picture } from "@astrojs/image/components";
-import heroImage from "assets/hero.png";
+import heroImage from "assets/logo_4.svg";
 import Link from "@components/ui/link.astro";
 import { Icon } from "astro-icon";
+import Container from "@components/container.astro";
 ---
-
+<Container >
 <main
   class="grid lg:grid-cols-2 place-items-center pt-16 pb-8 md:pt-12 md:pb-24">
   <div class="py-6 md:order-1 hidden md:block">
     <Picture
       src={heroImage}
-      alt="Astronaut in the air"
-      widths={[200, 400, 600]}
+      class="rounded-xl"
+      alt="Seven Law Firm logo"
+      widths={[200, 400, 600, 800]}
       aspectRatio="4:3"
       sizes="(max-width: 800px) 100vw, 620px"
       loading="eager"
@@ -20,35 +22,29 @@ import { Icon } from "astro-icon";
   </div>
   <div>
     <h1
-      class="text-5xl lg:text-6xl xl:text-7xl font-bold lg:tracking-tight xl:tracking-tighter">
-      Marketing website done with Astro
+      class="text-4xl lg:text-5xl xl:text-6xl font-bold lg:tracking-tight xl:tracking-tighter">
+      Un despacho profesional fundado por <span class="text-gray-500"
+        >abogados</span
+      >, <span class="text-slate-500"> economistas</span>, y <span
+        class="text-zinc-500">financieros</span
+      >
     </h1>
     <p class="text-lg mt-4 text-slate-600 max-w-xl">
-      Astroship is a starter template for startups, marketing websites & landing
-      pages.<wbr /> Built with Astro.build and TailwindCSS. You can quickly create
-      any website with this starter.
+      Seven Law Firm es situada en Barcelona ciudad, con oficinas asociadas y
+      una red de contactos potente en las principales capitales del mundo,
+      altamente comprometidas con la firma.
     </p>
     <div class="mt-6 flex flex-col sm:flex-row gap-3">
       <Link
         href="#"
-        href="https://web3templates.com/templates/astroship-starter-website-template-for-astro"
+        href="/contact"
         target="_blank"
         class="flex gap-1 items-center justify-center"
         rel="noopener">
-        <Icon class="text-white w-5 h-5" name="bx:bxs-cloud-download" />
-
-        Download for Free
-      </Link>
-      <Link
-        size="lg"
-        style="outline"
-        rel="noopener"
-        href="https://github.com/surjithctly/astroship"
-        class="flex gap-1 items-center justify-center"
-        target="_blank">
-        <Icon class="text-black w-4 h-4" name="bx:bxl-github" />
-        GitHub Repo
+        <Icon class="text-white w-5 h-5" name="mdi:email" />
+        Contacto
       </Link>
     </div>
   </div>
 </main>
+<Container/> 
